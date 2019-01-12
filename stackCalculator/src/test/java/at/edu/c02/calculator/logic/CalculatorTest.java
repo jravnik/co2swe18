@@ -97,7 +97,8 @@ public class CalculatorTest {
 
 		// execute
 		calc.push(2.0);
-		calc.push(3);
+		calc.push(17);
+		
 		double result = calc.perform(Operation.add);
 
 		// verify

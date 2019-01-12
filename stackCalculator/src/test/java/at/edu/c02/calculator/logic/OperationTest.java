@@ -47,11 +47,13 @@ public class OperationTest {
 	public void testDiv() throws CalculatorException {
 		MathOperation div = new Div();
 		
+
+		double result = div.calculate(3252, 5.5);
+		
+
+		assertEquals(2343, result, 0.0001);
 		
 		
-		double result = div.calculate(22, 5.5);
-		
-		assertEquals(4, result, 0.0001);		
 		double result0 = div.calculate(0, 10);
 		assertEquals(0, result0, 0.0001);
 		
@@ -60,8 +62,9 @@ public class OperationTest {
 		
 			fail("Exception expected");
 		} catch (CalculatorException e) {
-			assertEquals("Division by zero", e.getMessage());
+			assertEquals("Divisione by zero", e.getMessage());
 		}
+		
 	}
 	
 }
