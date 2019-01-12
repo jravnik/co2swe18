@@ -51,8 +51,12 @@ public class OperationTest {
 		
 		assertEquals(23, result, 0.0001);
 		
+		
+		double result0 = div.calculate(0, 10);
+		assertEquals(0, result0, 0.0001);
+		
 		try {
-			double result2 = div.calculate(55, 0);
+			double result2 = div.calculate(23, 0);
 		
 			fail("Exception expected");
 		} catch (CalculatorException e) {
