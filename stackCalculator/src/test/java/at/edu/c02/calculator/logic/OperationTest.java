@@ -60,7 +60,7 @@ public class OperationTest {
 		
 			fail("Exception expected");
 		} catch (CalculatorException e) {
-			assertEquals("Division by zero", e.getMessage());
+			assertEquals("Divisione by zero", e.getMessage());
 		}
 		
 	}
