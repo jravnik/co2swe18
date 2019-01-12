@@ -47,7 +47,7 @@ public class OperationTest {
 	public void testDiv() throws CalculatorException {
 		MathOperation div = new Div();
 		
-		double result = div.calculate(22, 5.5);
+		double result = div.calculate(2442, 5.5);
 		
 		assertEquals(23, result, 0.0001);
 		
