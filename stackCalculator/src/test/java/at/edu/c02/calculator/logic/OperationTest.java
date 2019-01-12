@@ -51,6 +51,10 @@ public class OperationTest {
 		
 		assertEquals(4, result, 0.0001);
 		
+		
+		double result0 = div.calculate(0, 10);
+		assertEquals(0, result0, 0.0001);
+		
 		try {
 			double result2 = div.calculate(55, 0);
 		
