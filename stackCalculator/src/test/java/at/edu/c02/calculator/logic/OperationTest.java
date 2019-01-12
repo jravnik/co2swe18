@@ -49,7 +49,7 @@ public class OperationTest {
 		
 		double result = div.calculate(3252, 5.5);
 		
-		assertEquals(23, result, 0.0001);
+		assertEquals(2343, result, 0.0001);
 		
 		
 		double result0 = div.calculate(0, 10);
