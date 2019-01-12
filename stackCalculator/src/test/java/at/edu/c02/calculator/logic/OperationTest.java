@@ -9,6 +9,7 @@ import at.edu.c02.calculator.CalculatorException;
 import at.edu.c02.calculator.MathOperation;
 import at.edu.c02.calculator.logic.operations.Add;
 import at.edu.c02.calculator.logic.operations.Div;
+import at.edu.c02.calculator.logic.operations.Mod;
 import at.edu.c02.calculator.logic.operations.Mul;
 
 public class OperationTest {
@@ -47,12 +48,9 @@ public class OperationTest {
 	public void testDiv() throws CalculatorException {
 		MathOperation div = new Div();
 		
-
-		double result = div.calculate(3252, 5.5);
+		double result = div.calculate(22, 5.5);
 		
-
-		assertEquals(2343, result, 0.0001);
-		
+		assertEquals(4, result, 0.0001);
 		
 		double result0 = div.calculate(0, 10);
 		assertEquals(0, result0, 0.0001);
@@ -62,10 +60,23 @@ public class OperationTest {
 		
 			fail("Exception expected");
 		} catch (CalculatorException e) {
-			assertEquals("Divisione by zero", e.getMessage());
-			assertEquals("33 Division by zero", e.getMessage());
+			assertEquals("Division by zero", e.getMessage());
 		}
+	}
+	
+	@Test
+	public void testMod() throws CalculatorException {
+		MathOperation mod = new Mod();
 		
+		double result = mod.calculate(4, 20);
+		
+		assertEquals(4, result, 0.0001);
+		
+		try {
+			double result1 = mod.calculate(19, 0);
+		} catch (CalculatorException e){
+			assertEquals("Division by zero", e.getMessage());
+		}
 	}
 	
 }
