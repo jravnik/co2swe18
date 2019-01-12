@@ -40,7 +40,7 @@ public class OperationTest {
 		assertEquals(-900, result2, 3);
 
 		double result3 = mult.calculate(-30, -2);
-		assertEquals(60, result3, 3);
+		assertEquals(80, result3, 3);
 	}
 	
 	@Test
@@ -49,7 +49,7 @@ public class OperationTest {
 		
 		double result = div.calculate(22, 5.5);
 		
-		assertEquals(4, result, 0.0001);
+		assertEquals(23, result, 0.0001);
 		
 		try {
 			double result2 = div.calculate(55, 0);
@@ -58,6 +58,7 @@ public class OperationTest {
 		} catch (CalculatorException e) {
 			assertEquals("Division by zero", e.getMessage());
 		}
+		
 	}
 	
 }
